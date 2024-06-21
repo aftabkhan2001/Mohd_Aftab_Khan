@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mohd Aftab Khan portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #07ffe6;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+  color:v white;
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Mohd Aftab Khan</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span style="color: whitesmoke;">Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span style="color: whitesmoke;">About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span style="color: whitesmoke;">Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span style="color: whitesmoke;">Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span style="color: whitesmoke;">Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero" style="background-color: rosybrown;">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+						<span class="subheading"> <span style="color: black;">Hey</span> </span>
+			            <h1 class="mb-4 mt-3">I'm <span style="color: black;">Mohd Aftab Khan</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Scientist  ',
+						'Data Analyst  ',
+						'AIEnthusiast',
+						];
+						
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2 style="color: #000000;" >A Data Scientist & AIEnthusiast</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/aftabkhan-k2001k" class="btn btn-primary py-3 px-4">LinkedIn</a>
+							<a href="https://github.com/aftabkhan2001" class="btn btn-white btn-outline-white py-3 px-4" >My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/bg_12.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Mohd Aftab Khan</span></p>
+										<p><span class="title-s">Profession: </span> <span>Data scientist,Data Analyst & AIEnthusiast</span></p>
+										<p><span class="title-s">Education: </span> <span>Diploma In Data Science & AIEnthusiast From Boston Institute Of Analytics</span></p>
+										<p><span class="title-s">Address: </span> <span>Mumbai, Maharashtra, India.</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4" style="color: white;">About Me</h2>
+								
+								<p>I am a passionate Data Scientist,Data analyst & AIEnthusiast with a solid background in business management and commerce. I possess the potential to make a significant impact in the realm of data-driven decision-making. I have completed a diploma in Data Science & AIEnthusiast from Boston Institute of Analytics and recently concluded a two-month internship with Spinnaker Analytics.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science,Data Analyst &amp; AIEnthusiast</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Ecommerce, BFSI</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Commerce (B.COM)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI,Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Excel,Python,SQL,Machine Learning</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Playing Cricket,Watching Series</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="3" style="color: white;">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/aftabkhan-k2001k" class="btn btn-primary py-3 px-3" style="background-color:#07ffe6; color:white;">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Emerging Data Science ,Data Analyst & AIEnthusiast with a 2-month internship, skilled in data science, statistics, and machine learning. Ready to drive business strategies with insightful data solutions.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Internship</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-2024</span>
+						<h2><a href="https://drive.google.com/file/d/1uaxsNzTMzRB36t5kk284fmgRksZuqLsL/view?usp=drive_link" style="color: white;">Data scientist,Data Analyst & AIEnthusiast  ☜</a></h2>
+						<span class="position">Spinnaker Analytics,Andheri Mumbai</span>
+						<p class="mt-4">Spinnaker Analytics is,Specializing in crafting bespoke analytics tools for industry leaders and small business owners alike. Bridging the worlds of data science and practical business acumen, we deliver advanced, intuitively accessible solutions that streamline decision-making and accelerate results. 
+							<ul>
+								<li>Analyzed credit card fraud dataset using PCA, distinguishing between normal and fraudulent transactions, and applying predictive modeling for accurate detection.</li>
+								<li>Worked on an e-commerce dataset to predict churn, considering factors influencing churn.Evaluated model performance using ROC AUC curves.Implemented hyperparameter tuning for each model and created a dashboard for comprehensive analysis.XGBoost outpewrforms the other two algorithm with highest roc score.</li>
+								<!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row justify-content-center">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2023</span>
+						<h2><a href="https://drive.google.com/file/d/1Kyj3A-Ke4IPShO7qCy8_6Cr7ovxTG7Ws/view?usp=drive_link" style="color: white;">Bachelor of Commerce  ☜</a></h2>
+    					<span class="position">Ghanshyamdas Saraf College<br>Mumbai University</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2019-2020</span>
+    					<h2><a href="https://drive.google.com/file/d/1zMIHTpgSkEZiiO3tjUcufbnMfrFFuvxe/view?usp=drive_link" style="color:white ;" >Higher Secondary School  ☜</a></h2>
+    					<span class="position">Durgadevi Saraf Junior College<br>University of Mumbai</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+
+				
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2024</span>
+    					<h2><a href="https://drive.google.com/file/d/1zxT1machDEWrbE17w7sexHDyQbKBQ05v/view?usp=drive_link" style="color: white;"> Data Science,Data Analytics & AIEnthusiast  ☜</a></h2>
+    					<span class="position">Boston Institue Of Analytics</span>
+    					<p class="mt-4">Campus: Andheri, Mumbai</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<!-- <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p> -->
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/aftabkhan2001/Bank-Personal-Loan-" class="block-20 zoom-effect" style="background-image: url('images/dashboard.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/aftabkhan2001/Bank-Personal-Loan-">Bank Personal Loan Prediction.</a></h3>
+                <p>Predict Bank Personal Loan Using Python,Analyze Stats & Visuals,ML & Power BI</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/aftabkhan2001/E-Commerce-Churn-Prediction-" class="block-20 zoom-effect" style="background-image: url('images/ecommerce.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/aftabkhan2001/E-Commerce-Churn-Prediction-">E-Commerce Churn Prediction</a></h3>
+                <p>Dove into e-commerce data using Python, uncovering insights to enhance customer experience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/aftabkhan2001/Bank-Customer-Churn-" class="block-20 zoom-effect" style="background-image: url('images/bank\ customer.webp');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/aftabkhan2001/Bank-Customer-Churn-">Bank Bank Customer Churn</a></h3>
+                <p>Used multiple machine learning models to Explored why customers leave banks, making plans to keep them happy and stay.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Certificate</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/plot.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4>Passionate about unraveling business challenges, I thrive on uncovering the untold narratives hidden within data.</h4>
+						<br>
+						<p><a href="https://github.com/aftabkhan2001" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Jogeshwari<br>Mumbai,India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+918451925332">+8451925332</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:mohdaftab.khan2001@gmail.com">mohdaftab.khan2001@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/drive/u/1/folders/1nARNpZFbP48FZiesX3XivHUbaqM8rRiq">resumelink</a></p>
+	          </div>
+          </div>
+		
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on</li>
+					  <li class="ftco-animate"><a href="https://wa.me/+918451925332"><span class="icon-whatsapp"></span></a></li>
+					  <li class="ftco-animate"><a href="https://facebook.com/aftabkhan2001"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/aaftabb.___/"><span class="icon-instagram"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/heyaftabb"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/aftabkhan-k2001k"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://github.com/aftabkhan2001"><span class="icon-github"></span></a></li>
+					  <!-- <li class="ftco-animate"><a href="https://snapchat.com/add/heyyaftabb"><span class="icon-snapchat"></span></a></li> -->
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Thank you for visiting my portfolio – where creativity meets functionality, and every project tells a unique story<i class="icon-heart color-danger"></i>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
